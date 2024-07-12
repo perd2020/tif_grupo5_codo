@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ico -->
+    <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- title -->
+    <title>Doguito petshop | ADMINISTRADOR </title>
+</head>
+<body>
+    
+    <div class=" contenedor_principal container-fluid">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img class="logo_doguito_petshop" src="./img/logo_doguitoPetshop.jpeg" alt="logo DOGUITO PET SHOP">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">catalogo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Usuario
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Inicio de sesión</a></li>
+                                <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- FIN NAVBAR -->
+    
+        <!-- hero-->
+        <section class="container card_header_administrador">
+            <!-- imagen del administrador -->
+        </section>
+        
+        <div class="contenedor-hero container-fluid">
+            <!-- <article class="container-fluid info-administrador"> -->
+                <h1 class="card-title fs-1">Bienvenido</h1>
+                <p class="card-text fs-4">Seccion administración de productos y clientes.</p>
+                <p class="card-text fs-6"><small>Last updated 3 mins ago</small></p>                
+            <!-- </article> -->
+        </div>        
+        <!-- hero -->
+        
+        <!-- formulario DE PRODUCTOS -->
+        <div class="contenedor-formularios container">
+            <h3 class="text-center">Gestion De Productos</h3>
+            <button id="mostrarCrearProductoFormBtn" class="btn-mostrarOcultarForm "> Cargar Nuevo Producto</button>
+            
+            <form id="crearProductoForm" class=" hidden" enctype="multipart/form-data">
+                <h4>Carga de Producto</h4>
+                <label for="producto"> Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+
+                <label for="marca">Marca: </label>
+                <input type="text" id="marca"  name="marca" required>
+
+                <label for="precio">Precio: </label>
+                <input type="number" id="precio" name="precio" required>
+                
+                <label for="categoria"> Categoria: </label>
+                <input type="text" id="categoria" name="categoria" required>
+    
+                <label for="observaciones">Observaciones: </label>
+                <input type="text" id="observaciones" name="observaciones" required>
+    
+                <label for="stock">Stock: </label>
+                <input type="number" id="stock" name="stock" required>
+
+                <label for="disponible">Disponible: </label>
+                <input type="text" id="disponible" name="disponible" required>
+            
+    
+                <button type="submit" class="btn-mostrarOcultarForm "> Cargar nuevo producto</button>    
+            </form>
+    
+    
+            <!--form para editar un producto-->
+            <form id="editarProductoForm" class="hidden " enctype="multipart/form-data">
+                <h4>Editar producto</h4>
+                <input type="hidden" id="editProductoID" name="editProductoID">
+    
+                <label for="editProducto">Producto: </label>
+                <input type="text" id="editProducto"  name="editProducto" required>
+
+                <label for="editMarca">Marca: </label>
+                <input type="text" id="editMarca"  name="editMarca" required>
+    
+                <label for="editCategoria">Categoria: </label>
+                <input type="text" id="editCategoria" name="editCategoria" required>
+    
+                <label for="editPrecio">Precio: </label>
+                <input type="number" id="editPrecio" name="editPrecio" required>
+    
+                <label for="editObservaciones">Observaciones: </label>
+                <input type="text" id="editObservaciones" name="editObservaciones" required>
+    
+                <label for="editStock">Stock: </label>
+                <input type="number" id="editStock" name="editStock" required>
+
+                <label for="editDisponible">Disponible: </label>
+                <input type="text" id="editDisponible" name="editDisponible" required>
+    
+                <button type="submit" class="btn-mostrarOcultarForm "> Actualizar Producto </button>
+    
+            </form>   
+    
+    
+            <!--Seccion para MOSTRAR TODOS LOS productos-->
+                <h4 class="text-center">Lista de productos</h4>
+                <button id="listarProductosBtn" class="btn-mostrarOcultarForm "> Lista de Todos los Productos</button>
+                <ul id="listaDeProductos">    
+                </ul>
+                
+        </div>
+        <!-- fin formulario productos-->        
+
+
+    <!---FOOTER------------------------------------------------------------------------------------------------------------------- -->
+    <footer class="footer" id="footer">
+        <div class="contenedorFooter">
+            <h2 class="footer__title">Querés saber sobre nosotros?</h2>
+                <div class="footer__info">
+                    <a href="./informacionExtra.html/.mapa">🏦dónde estamos</a>
+                    <a href="#">😎sugerencias </a>
+                    <a href="#">💲💲medios de pago</a>
+                </div>
+                <p class="logos_title">seguinos en nuestras redes</p>
+                <div class="footer__logos" id="contacto">
+                    <div  class="logos">
+                        <img class="foolog" src="img/logos/face.png" alt="LOGO FACE">
+                    </div>
+                    <div  class="logos">
+                        <img  class="foolog" src="img/logos/insta.png" alt="logo instagram">
+                    </div>
+                    <div class="logos">
+                        <a href="#"><img class="foolog" src="img/logos/whatsapp.png"  alt="foolog"></a>
+                    </div>
+                </div>
+                <div class="firma-pag">
+                    <p> <b>Patricia Ruiz Diaz</b> &copy 2024</p>
+                </div>
+            </div>
+    </footer>
+    
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

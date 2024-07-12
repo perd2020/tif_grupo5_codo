@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,600;0,800;1,400;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@400;700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+:root {
+    /* fuente */
+    --clr-principal:white;
+    --clr-secundario:black;
+    
+    --fte-principal:"Ubuntu Sans", sans-serif;
+    --fte-titulo-principal:"Atma", system-ui;
+
+    --font-size-principal:1.5rem;
+    --font-size-titulo-principal:4rem;
+    --font-size-subtitulo:1.5rem;
+    /* gradiente del fondo */
+    --gradient-color-A:rgba(244, 198, 200, 0.802);
+    --gradient-color-B:rgba(144, 159, 190, 0.875);
+
+    
+    /*blancos*/
+    --clr-white: rgb(255, 255, 255);
+    --clr-img-fondo:rgb(242, 239, 235) ;
+    --clr-gray: rgb(226, 226, 226);
+    --clr-grayDark: rgb(97, 92, 92);
+
+    /*azules*/
+    --clr-violate: #4b33a8;
+    --clr-violate-light: #785ce9;
+    --clr-blue: rgb(74, 51, 168);
+    --clr-blue-light: rgb(120, 92, 232);
+    --clr-blueDark: rgb(34, 15, 109);
+
+    --clr--fnd-transp:rgba(121, 93, 233, 0.5);
+
+    /*negros*/
+    --clr-black: rgba(0,0,0);
+
+    --clr-black-trns:rgba(1, 1, 1, 0.7);
+    --clr--bx-shadow:2px 5px 20px rgba(0,0,0, 1.27);
+
+    /*colores */
+    --clr-red: rgb(150, 23, 23);
+    --clr-red-hover: rgb(148, 73, 73);
+
+    --color-A: rgb(244 198 200);
+    --color-B: rgb(144 159 190);
+
+
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--clr-principal);
+}
+
+ul li{
+    list-style: none;
+}
+
+body{
+    font-family: var(--fte-principal);
+}
+
+
+
+.logo_doguito_petshop{
+    width: 40px;
+    height: 40px;
+} 
+
+
+/*  */
+
+.contenedor_principal {
+    background: linear-gradient(to bottom,
+            var(--gradient-color-A),
+            var(--gradient-color-B)),
+        /* url('/img/fondo1.jpeg') */
+        ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+
+}
+
+
+/*  */
+
+/* cards */
+
+/* .card_header_administrador{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+    border-radius: 25%;
+    background: url('img/logo_admin.jpeg');
+        background-size: cover;
+    background-position: center;
+} */
+
+/* hero */
+.contenedor-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 100px 0;
+    text-align: center;
+    font-family: var(--fte-titulo-principal);
+}
+/* hero */
+
+/* form */
+.contenedor_formularios{
+    /* max-width: 80%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.contenedor_formulario {
+    text-align: center;
+    width: 70vw;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.btn-mostrarOcultarForm {
+    background-color: var(--color-B);
+    color:var(--color-A);
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+button:hover {
+    background-color: var(--clr-blueDark);
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    background: #d5ede9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+li .actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+li button {
+    background-color: #577fac;
+}
+
+
+li button:hover {
+    background-color: #1607f0;
+}
+
+
+li .delete {
+    background-color: #ef4c5c;
+}
+
+
+li .delete:hover {
+    background-color:var(--clr-red);
+}
+
+/* fin form */
+
+
+/* footer */
+.footer{   
+    background-color: rgb(198, 194, 194);
+    margin-top: 10px;
+}
+.contenedorFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.footer__title{
+    text-align: center;
+    /* text-transform: capitalize; */
+    font-size: 1em;
+    margin: 10px;
+}
+/* .footer__title:hover{
+    translate: 25px;
+} */
+.footer__info{
+    border-radius: 5px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__info a{
+    padding: 5px;
+    margin: auto;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.footer__info a:hover{
+    transform: scale(1.2);
+    border-bottom: 2px solid #000;
+}
+
+.footer__logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 2px solid #000;
+}
+
+.logos_title{
+    margin: auto;
+    font-size: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+}
+
+.logos {
+    padding: 0.625rem ;
+} 
+
+
+.foolog{
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: .3s;
+}
+
+
+.foolog:hover{
+    transform: scale(1.2);
+}
+
+
+.firma-pag{
+    background-color: var(--clr-black-trns);
+    color: #fff;
+    text-align: center;
+}
+
+.firma-pag >p {
+    padding: 5px;
+    font-size: 0.5rem;
+}
+
+@media screen  and (max-width:708px){
+    .contenedorFooter{
+        font-size:0.9rem;
+    
+    }
+}
+
+
+
+/* fin footer */
+
+
+
+/* clases especiales */
+
+.hidden{
+    display: none;
+}
+
+
+
+
